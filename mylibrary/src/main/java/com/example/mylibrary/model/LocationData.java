@@ -1,4 +1,4 @@
-package model;
+package com.example.mylibrary.model;
 
 import io.realm.RealmObject;
 

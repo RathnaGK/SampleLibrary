@@ -1,4 +1,4 @@
-package service;
+package com.example.mylibrary.service;
 
 import android.app.Service;
 import android.content.Intent;
@@ -9,12 +9,13 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.example.mylibrary.model.LocationData;
+
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
 import io.realm.Realm;
 import io.realm.RealmResults;
-import model.LocationData;
 
 public class LatLngDatabase extends Service
 {

@@ -1,4 +1,4 @@
-package model;
+package com.example.mylibrary.model;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -42,7 +42,7 @@ public class LocalLog {
     {
         String message = "INFO" +" "+ new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format( new Date()) + " "+text;
         try {
-            BufferedWriter buf = new BufferedWriter(new FileWriter(mFile,true));
+            BufferedWriter  buf = new BufferedWriter(new FileWriter(mFile,true));
             buf.append(message);
             buf.newLine();
             buf.flush();
@@ -55,7 +55,7 @@ public class LocalLog {
     {
         String message = "DEBUG" +" "+ new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format( new Date()) + " "+text;
         try {
-            BufferedWriter buf = new BufferedWriter(new FileWriter(mFile,true));
+            BufferedWriter  buf = new BufferedWriter(new FileWriter(mFile,true));
             buf.append(message);
             buf.newLine();
             buf.flush();
@@ -68,7 +68,7 @@ public class LocalLog {
     {
         String message = "WARNING" +" "+ new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format( new Date()) + " "+text;
         try {
-            BufferedWriter buf = new BufferedWriter(new FileWriter(mFile,true));
+            BufferedWriter  buf = new BufferedWriter(new FileWriter(mFile,true));
             buf.append(message);
             buf.newLine();
             buf.flush();

@@ -1,4 +1,4 @@
-package service;
+package com.example.mylibrary.service;
 
 
 import android.Manifest;
@@ -15,11 +15,12 @@ import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.example.mylibrary.model.LocalLog;
+
 import org.greenrobot.eventbus.EventBus;
 
-import model.LocalLog;
-
-public class PositionService extends Service {
+public class PositionService extends Service
+{
     // Flag for GPS status
     boolean isGPSEnabled = false;
 
@@ -68,9 +69,9 @@ public class PositionService extends Service {
                 }
                 locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, mLocationListener);
             }
-           if (isNetworkEnabled)
+            if (isNetworkEnabled)
             {
-               locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, mLocationListener);
+                locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, mLocationListener);
             }
         }
 
